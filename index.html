@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>A Pen by  Vitaly</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div id="app">
+  <div class="search-wrapper">
+    <input type="text" v-model="keyword" placeholder="Search Title..."/>
+    <label>Search Title:</label>
+  </div>
+  <div class="wrapper">
+    <div class="card" v-for="post in filteredList">
+      <a v-bind:href="post.link" target="_blank">
+        <img v-bind:src="post.img" />
+        <small>Posted by {{ post.author }}</small>
+        {{ post.title }}
+      </a>
+    </div>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.9/vue.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
